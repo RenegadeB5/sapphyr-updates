@@ -1,0 +1,2 @@
+# FactionsBot
+.checked
