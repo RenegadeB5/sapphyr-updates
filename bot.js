@@ -27,14 +27,14 @@ function msToTime(timeMS) {
 client.on('ready', () => {
     client.user.setGame("tntdetectors.com | " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
-    NOTIFY_CHANNEL = client.channels.find("name", "wall-check"); // Channel to send notification
+    NOTIFY_CHANNEL = client.channels.find("name", "checkwall"); // Channel to send notification
 
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
     if(test == 1 && (key != 0)){
 
-        NOTIFY_CHANNEL.sendMessage('@here ```nobody has checked walls in 15 minutes```', {tts: true});
-        NOTIFY_CHANNEL.sendMessage('@here ```nobody has checked walls in 15 minutes```', {tts: true});
+        NOTIFY_CHANNEL.sendMessage('@everyone walls have not been checked for 15 minutes', {tts: true});
+        NOTIFY_CHANNEL.sendMessage('@everyone walls have not been checked for 15 minutes', {tts: true});
 
     }
     else{
@@ -46,7 +46,7 @@ client.on('ready', () => {
 );
 //CHECKED-----------------------------------------------------------------------
 client.on('message', message => {
-  if (message.content == prefix + 'checked') {
+  if (message.content == prefix + 'clear') {
     lastSender = message.guild.lastSender = message.author
     lastTime = new Date()
 
@@ -55,13 +55,13 @@ client.on('message', message => {
 });
 //WEEWOO------------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.content === prefix + "weewoo") {
-    NOTIFY_CHANNEL.sendMessage('specify direction .weewoo south/west');
+  if (message.content === prefix + "raid") {
+    NOTIFY_CHANNEL.sendMessage('specify direction .raid south/west');
   }
 });
 //WEEWOO NORTH------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.content === prefix + "weewoo north") {
+  if (message.content === prefix + "raid north") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
@@ -71,7 +71,7 @@ client.on ('message', message => {
 });
 //WEEWOO EAST-------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.content === prefix + "weewoo east") {
+  if (message.content === prefix + "raid east") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
@@ -81,7 +81,7 @@ client.on ('message', message => {
 });
 //WEEWOO SOUTH------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.content === prefix + "weewoo south") {
+  if (message.content === prefix + "raid south") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
@@ -91,7 +91,7 @@ client.on ('message', message => {
 });
 //WEEWOO WEST-------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.content === prefix + "weewoo west") {
+  if (message.content === prefix + "raid west") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
@@ -106,16 +106,16 @@ client.on ('message', message => {
     const embed = new Discord.RichEmbed()
     .setColor(0xFF0000)
     .setTimestamp()
-    .setTitle('꧁⎝⧹❤Ƹ̵̡Ӝ̵̨̄ƷWall Stats ᓭ(◕‿◕✿)ᓯ❤⧸⎠ ꧂')
+    .setTitle('Wall Stats')
     .addField('Wall Status Factions', 'Last `.checked was by @' + message.guild.lastSender.username)
     .addField('Time Since Last ```.Checked```', msToTime(Math.abs(new Date() - lastTime)) + " ago.")
     .addField('Time Until Reminder', msToTime(15*60*1000 - Math.abs(new Date() - lastTime)))
     .setThumbnail("https://cdn3.iconfinder.com/data/icons/minecraft-icons/512/tnt.png")
-    .setURL("http://www.tntdetectors.com")
+    .setURL("http://thearchon.net")
       NOTIFY_CHANNEL.sendEmbed(embed)
     }
     else {
-      NOTIFY_CHANNEL.sendMessage("```do .checked and then i'll tell u ;)```")
+      NOTIFY_CHANNEL.sendMessage("```do .clear and then i'll tell u ;)```")
     }
   }
 });
@@ -124,9 +124,9 @@ client.on ('message', message => {
   if (message.content === prefix + "help") {
     const embed = new Discord.RichEmbed()
     .setColor(0xFF0000)
-    .setTitle('꧁⎝⧹❤Ƹ̵̡Ӝ̵̨̄ƷCLICK FOR HELP ᓭ(◕‿◕✿)ᓯ❤⧸⎠ ꧂')
+    .setTitle('CLICK FOR HELP')
     .addField('help')
-    .setURL("https://www.youtube.com/c/cannuner")
+    .setURL("https://thearchon.net")
       NOTIFY_CHANNEL.sendEmbed(embed)
   }
 })
