@@ -131,4 +131,4 @@ client.on ('message', message => {
   }
 })
 //LOGIN TOKEN-------------------------------------------------------------------
-client.login('RBh52md2pPjy6zWwVMoJU-u5h6aVeGah');
+client.login('MzczMTQwOTY2NjUzMDM0NTA2.DNPplg.Avv_VQmdUPGewacGfR95MswTNhs');
