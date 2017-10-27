@@ -53,13 +53,13 @@ client.on('message', message => {
     NOTIFY_CHANNEL.sendMessage('Walls have been checked! , thanks!')
     key = 0 }
 });
-//WEEWOO------------------------------------------------------------------------
+//RAID------------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid") {
-    NOTIFY_CHANNEL.sendMessage('specify direction .raid south/west');
+    NOTIFY_CHANNEL.sendMessage('specify direction .raid north/east/south/west');
   }
 });
-//WEEWOO NORTH------------------------------------------------------------------
+//RAID NORTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid north") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
@@ -69,7 +69,7 @@ client.on ('message', message => {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
   }
 });
-//WEEWOO EAST-------------------------------------------------------------------
+//RAID EAST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid east") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
@@ -79,17 +79,37 @@ client.on ('message', message => {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
   }
 });
-//WEEWOO SOUTH------------------------------------------------------------------
+//CASTLE-------------------------------------------------------------------
+client.on ('message', message => {
+  if (message.content === prefix + "castle") {
+    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
+  }
+});
+//RAID SOUTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid south") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});  
   }
 });
-//WEEWOO WEST-------------------------------------------------------------------
+//KOTH------------------------------------------------------------------
+client.on ('message', message => {
+  if (message.content === prefix + "koth") {
+    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
+  }
+});
+//RAID WEST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid west") {
     NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
@@ -108,14 +128,14 @@ client.on ('message', message => {
     .setTimestamp()
     .setTitle('Wall Stats')
     .addField('Wall Status Factions', 'Last `.checked was by @' + message.guild.lastSender.username)
-    .addField('Time Since Last ```.Checked```', msToTime(Math.abs(new Date() - lastTime)) + " ago.")
+    .addField('Time Since Last ```.clear```', msToTime(Math.abs(new Date() - lastTime)) + " ago.")
     .addField('Time Until Reminder', msToTime(15*60*1000 - Math.abs(new Date() - lastTime)))
     .setThumbnail("https://cdn3.iconfinder.com/data/icons/minecraft-icons/512/tnt.png")
     .setURL("http://thearchon.net")
       NOTIFY_CHANNEL.sendEmbed(embed)
     }
     else {
-      NOTIFY_CHANNEL.sendMessage("```do .clear and then i'll tell u ;)```")
+      NOTIFY_CHANNEL.sendMessage("do .clear and then i'll tell u ;)")
     }
   }
 });
