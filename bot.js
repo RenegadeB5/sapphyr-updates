@@ -8,7 +8,7 @@ var lastTime;
 var key = 1;
 var int1;
 var NOTIFY_CHANNEL;
-
+ 
 function msToTime(timeMS) {
       var timeString;
       var seconds = parseInt((timeMS/1000)%60)
@@ -25,22 +25,22 @@ function msToTime(timeMS) {
 }
 //ON LOGIN----------------------------------------------------------------------
 client.on('ready', () => {
-    client.user.setGame("tntdetectors.com | " + client.guilds.array().length + " Servers");
+    client.user.setGame("Exiled Hack! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
     NOTIFY_CHANNEL = client.channels.find("name", "checkwall"); // Channel to send notification
-
+ 
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
     if(test == 1 && (key != 0)){
-
-        NOTIFY_CHANNEL.sendMessage('@everyone walls have not been checked for 15 minutes', {tts: true});
-        NOTIFY_CHANNEL.sendMessage('@everyone walls have not been checked for 15 minutes', {tts: true});
-
+ 
+        NOTIFY_CHANNEL.sendMessage('@here OI YOU STINKY CUNTS. WALLS HAVENT BEEN CHECKED FOR 15mins. SO PULL YOUR FINGER OUT OF YOUR ASS AND CHECK EM', {tts: true});
+        NOTIFY_CHANNEL.sendMessage('@here OI YOU STINKY CUNTS. WALLS HAVENT BEEN CHECKED FOR 15mins. SO PULL YOUR FINGER OUT OF YOUR ASS AND CHECK EM', {tts: true});
+ 
     }
     else{
         key = 1
         test = 1}
-    }, 1500000);
+    }, 900000);
 //1200000 = 20 mins 900000 = 15 mins  1500000 = 25 mins 1800000 = 30 mins https://www.timecalculator.net/seconds-to-milliseconds
 } //1 second = 1000 ms
 );
@@ -49,8 +49,8 @@ client.on('message', message => {
   if (message.content == prefix + 'clear') {
     lastSender = message.guild.lastSender = message.author
     lastTime = new Date()
-
-    NOTIFY_CHANNEL.sendMessage ('Walls have been checked! , thanks!')
+ 
+    NOTIFY_CHANNEL.sendMessage ('Fuck me. Someones actually checked, thank you!')
     key = 0 }
 });
 //RAID------------------------------------------------------------------------
@@ -62,61 +62,61 @@ client.on ('message', message => {
 //RAID NORTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid north") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM NORTH SIDE**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
   }
 });
 //RAID EAST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid east") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM EAST SIDE**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
   }
 });
 //CASTLE-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "castle") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **The castle is being contested**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
   }
 });
 //RAID SOUTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid south") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM SOUTH SIDE**', {tts: true});  
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});  
   }
 });
 //KOTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "koth") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **A koth is about/has already begun.**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
   }
 });
 //RAID WEST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid west") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **BEING RAIDED FROM WEST SIDE**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
   }
 });
 //WALLS-------------------------------------------------------------------------
@@ -139,7 +139,7 @@ client.on ('message', message => {
     }
   }
 });
-
+ 
 client.on ('message', message => {
   if (message.content === prefix + "help") {
     const embed = new Discord.RichEmbed()
