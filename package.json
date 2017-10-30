@@ -1,0 +1,30 @@
+{
+  "name": "ExiledMasterRace",
+  "version": "0.2.0",
+  "description": "Discord Bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+    "discord.js": "^8.2.0"
+  },
+  "engines": {
+    "node": "6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RenegadeB5/ExiledMasterRace"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "RenegadeBB and Cannuner",
+  "contributors": [
+    "RenegadeBB and Cannuner"
+  ],
+  "license": "MIT"
+}
