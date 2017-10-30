@@ -33,8 +33,8 @@ client.on('ready', () => {
     int1 = setInterval(function cannuner(){
     if(test == 1 && (key != 0)){
  
-        NOTIFY_CHANNEL.sendMessage('@here OI YOU STINKY CUNTS. WALLS HAVENT BEEN CHECKED FOR 15mins. SO PULL YOUR FINGER OUT OF YOUR ASS AND CHECK EM', {tts: true});
-        NOTIFY_CHANNEL.sendMessage('@here OI YOU STINKY CUNTS. WALLS HAVENT BEEN CHECKED FOR 15mins. SO PULL YOUR FINGER OUT OF YOUR ASS AND CHECK EM', {tts: true});
+        NOTIFY_CHANNEL.sendMessage('@here Walls have not been checked for 15 minutes. Get off your bum and check them', {tts: true});
+        NOTIFY_CHANNEL.sendMessage('@here Walls have not been checked for 15 minutes. Get off your bum and check them', {tts: true});
  
     }
     else{
@@ -62,61 +62,67 @@ client.on ('message', message => {
 //RAID NORTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid north") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us North Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
   }
 });
 //RAID EAST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid east") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us East Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
   }
 });
 //CASTLE-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "castle") {
-    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Them damn niggers taking my castle again!**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
   }
 });
 //RAID SOUTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid south") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us South Side**', {tts: true});  
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});  
   }
 });
 //KOTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "koth") {
-    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here **Oi ya stinky jews, theres a fucking KOTH**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
   }
 });
 //RAID WEST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid west") {
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone **Some Stink Paki Rat Is Raiding us West Side**', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
+  }
+});
+//tts-------------------------------------------------------------------
+client.on ('message', message => {
+  if (message.content === prefix + "tts") {
+     process: function(bot,msg,suffix){ NOTIFY_CHANNEL.sendMessage(suffix);}
   }
 });
 //WALLS-------------------------------------------------------------------------
@@ -127,7 +133,7 @@ client.on ('message', message => {
     .setColor(0xFF0000)
     .setTimestamp()
     .setTitle('Wall Stats')
-    .addField('Wall Status Factions', 'Last `.checked was by @' + message.guild.lastSender.username)
+    .addField('Wall Status Factions', 'Last `.cleared was by @' + message.guild.lastSender.username)
     .addField('Time Since Last ```.clear```', msToTime(Math.abs(new Date() - lastTime)) + " ago.")
     .addField('Time Until Reminder', msToTime(15*60*1000 - Math.abs(new Date() - lastTime)))
     .setThumbnail("https://cdn3.iconfinder.com/data/icons/minecraft-icons/512/tnt.png")
