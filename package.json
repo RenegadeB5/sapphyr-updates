@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "dependencies" :
  { 
-   "windowsbuildtools" : "https://github.com/felixrieseberg/windows-build-tools.git"
    "discord.js" : "https://github.com/hydrabolt/discord.js.git"
     }
 }
