@@ -1,7 +1,7 @@
 {
   "name": "ExiledMasterRace",
   "version": "1.0.0",
-{ "dependencies" :
+  "dependencies" :
  { "discord.js" : "https://github.com/hydrabolt/discord.js.git"
     }
 }
