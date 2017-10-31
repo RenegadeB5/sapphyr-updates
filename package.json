@@ -7,6 +7,6 @@
     },
   "scripts":
  { 
-    "start": "node your-script.js" 
+    "start": "bot.js" 
      },
 } 
