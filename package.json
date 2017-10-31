@@ -4,9 +4,5 @@
   "dependencies" :
  { 
    "discord.js": "https://github.com/hydrabolt/discord.js.git"
-    },
-  "scripts":
- { 
-    "start": "bot.js" 
-     },
+    }
 } 
