@@ -1,9 +1,9 @@
 {
   "name": "ExiledMasterRace",
   "version": "1.0.0",
-  "dependencies" :
+  "dependencies":
  { 
-   "windows-build-tools" : "https://github.com/felixrieseberg/windows-build-tools.git"
+   "windows-build-tools": "https://github.com/felixrieseberg/windows-build-tools.git"
    "discord.js": "https://github.com/hydrabolt/discord.js.git"
     }
 }
