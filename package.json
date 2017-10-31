@@ -5,6 +5,7 @@
  { 
    "discord.js" : "https://github.com/hydrabolt/discord.js.git"
     }
-  "scripts": {
+  "scripts" : 
+  {
     "start": "node your-script.js"
 } 
