@@ -25,7 +25,7 @@ function msToTime(timeMS) {
 }
 //ON LOGIN----------------------------------------------------------------------
 client.on('ready', () => {
-    client.user.setGame("Exiled Hack! " + client.guilds.array().length + " Servers");
+    client.user.setGame("Exiled R Shit! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
     NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
  
@@ -33,8 +33,8 @@ client.on('ready', () => {
     int1 = setInterval(function cannuner(){
     if(test == 1 && (key != 0)){
  
-        NOTIFY_CHANNEL.sendMessage('@here Walls have not been checked for 15 minutes. Get off your bum and check them', {tts: true});
-        NOTIFY_CHANNEL.sendMessage('@here Walls have not been checked for 15 minutes. Get off your bum and check them', {tts: true});
+        NOTIFY_CHANNEL.sendMessage('@here Oi lazy cunts, Check the walls.', {tts: false});
+        NOTIFY_CHANNEL.sendMessage('@here Oi lazy cunts, Check the walls.', {tts: false});
  
     }
     else{
@@ -62,61 +62,57 @@ client.on ('message', message => {
 //RAID NORTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid north") {
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM NORTH SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
   }
 });
 //RAID EAST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid east") {
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM EAST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
   }
 });
 //CASTLE-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "castle") {
-    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here The castle is being contested', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here SOME NIGGERS TAKING MY CASTLE', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here SOME NIGGERS TAKING MY CASTLE', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here SOME NIGGERS TAKING MY CASTLE', {tts: false});
   }
 });
 //RAID SOUTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid south") {
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM SOUTH SIDE', {tts: true});  
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});  
   }
 });
 //KOTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "koth") {
-    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@here A koth is about to/Has already begun', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@here OI JEWS, Theres a koth.', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here OI JEWS, Theres a koth.', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here OI JEWS, Theres a koth.', {tts: false});
   }
 });
 //RAID WEST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid west") {
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
-    NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
   }
 });
 //WALLS-------------------------------------------------------------------------
@@ -131,7 +127,7 @@ client.on ('message', message => {
     .addField('Time Since Last ```.clear```', msToTime(Math.abs(new Date() - lastTime)) + " ago.")
     .addField('Time Until Reminder', msToTime(15*60*1000 - Math.abs(new Date() - lastTime)))
     .setThumbnail("https://cdn3.iconfinder.com/data/icons/minecraft-icons/512/tnt.png")
-    .setURL("http://thearchon.net")
+    .setURL("https://raw.githubusercontent.com/RenegadeB5/ExiledMasterRace/master/help.md")
       NOTIFY_CHANNEL.sendEmbed(embed)
     }
     else {
@@ -146,7 +142,7 @@ client.on ('message', message => {
     .setColor(0xFF0000)
     .setTitle('CLICK FOR HELP')
     .addField('help')
-    .setURL("https://thearchon.net")
+    .setURL("https://raw.githubusercontent.com/RenegadeB5/ExiledMasterRace/master/help.md")
       NOTIFY_CHANNEL.sendEmbed(embed)
   }
 })
