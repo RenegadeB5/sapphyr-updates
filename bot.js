@@ -27,7 +27,7 @@ function msToTime(timeMS) {
 client.on('ready', () => {
     client.user.setGame("Exiled Hack! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
-    NOTIFY_CHANNEL = client.channels.find("name", "checkwall"); // Channel to send notification
+    NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
  
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
@@ -119,12 +119,6 @@ client.on ('message', message => {
     NOTIFY_CHANNEL.sendMessage('@everyone BEING RAIDED FROM WEST SIDE', {tts: true});
   }
 });
-//tts-------------------------------------------------------------------
-client.on ('message', message => {
-  if (message.content === prefix + "tts") {
-     process: function(bot,msg,suffix){ NOTIFY_CHANNEL.sendMessage(suffix);}
-  }
-});
 //WALLS-------------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "walls") {
@@ -157,4 +151,4 @@ client.on ('message', message => {
   }
 })
 //LOGIN TOKEN-------------------------------------------------------------------
-client.login('MzczMTQwOTY2NjUzMDM0NTA2.DNTzUw._rcJrfJvHE6PF9tR83zgBUKaMYA');
+client.login('MzczMTQwOTY2NjUzMDM0NTA2.DNsyfg.JlQTHYPaA7sXJ_sW4Eb7db7VWBk');
