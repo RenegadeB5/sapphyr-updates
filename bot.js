@@ -1,6 +1,7 @@
 //bot.js
 //anything with "//" infront of it is treated as a comment, it doesn't affect the code of the bot
 const Discord = require('discord.js');
+const config = require("./config.json");
 var client = new Discord.Client();
 const prefix = ".";
 var test = 0;
