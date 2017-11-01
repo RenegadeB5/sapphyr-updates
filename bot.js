@@ -63,44 +63,44 @@ client.on ('message', message => {
 //RAID NORTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid north") {
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US NORTH SIDE!', {tts: false});
   }
 });
 //RAID EAST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid east") {
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
   }
 });
 //kys bot-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === "kys bot") {
-    NOTIFY_CHANNEL.sendMessage('Neck yourself @' + message.guild.lastSender.username, {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('Neck yourself @' + message.guild.lastSender.username, {tts: false});
   }
 });
 //spam-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "spam") {
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
   }
 });
 //CASTLE-------------------------------------------------------------------
@@ -114,11 +114,11 @@ client.on ('message', message => {
 //RAID SOUTH------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid south") {
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: fasle});  
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US SOUTH SIDE!', {tts: false});  
   }
 });
 //KOTH------------------------------------------------------------------
@@ -132,11 +132,11 @@ client.on ('message', message => {
 //RAID WEST-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid west") {
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
-    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
+    NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: false});
   }
 });
 //WALLS-------------------------------------------------------------------------
