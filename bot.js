@@ -40,7 +40,7 @@ client.on('ready', () => {
     else{
         key = 1
         test = 1}
-    }, 900000);
+    }, 692307);
 //1200000 = 20 mins 900000 = 15 mins  1500000 = 25 mins 1800000 = 30 mins https://www.timecalculator.net/seconds-to-milliseconds
 } //1 second = 1000 ms
 );
