@@ -1,6 +1,7 @@
 # ExiledMasterRace
 
-origional script by Cannuner.
+
+Origional script by Cannuner.
 
 
-Modified by RenegadeBB
+Modified by RenegadeBB.
