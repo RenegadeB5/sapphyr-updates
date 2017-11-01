@@ -79,6 +79,29 @@ client.on ('message', message => {
     NOTIFY_CHANNEL.sendMessage('@everyone SOME PAKI RAT IS RAIDING US EAST SIDE!', {tts: fasle});
   }
 });
+//kys bot-------------------------------------------------------------------
+client.on ('message', message => {
+  if (message.content === "kys bot") {
+    NOTIFY_CHANNEL.sendMessage('Neck yourself @' + message.guild.lastSender.username, {tts: fasle});
+  }
+});
+//spam-------------------------------------------------------------------
+client.on ('message', message => {
+  if (message.content === prefix + "spam") {
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: fasle});
+    NOTIFY_CHANNEL.sendMessage('@here ', {tts: fasle});
+  }
+});
 //CASTLE-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "castle") {
