@@ -29,7 +29,7 @@ client.on('ready', () => {
     client.user.setGame("Exiled R Shit! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
     NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
  
 //SET INTERVAL------------------------------------------------------------------
