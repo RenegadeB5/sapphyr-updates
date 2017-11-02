@@ -83,7 +83,7 @@ client.on ('message', message => {
 //kys bot-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === "kys bot") {
-    NOTIFY_CHANNEL.sendMessage('Neck yourself @' + message.guild.lastSender.username, {tts: false});
+    NOTIFY_CHANNEL.sendMessage('Neck yourself', {tts: false});
   }
 });
 //spam-------------------------------------------------------------------
