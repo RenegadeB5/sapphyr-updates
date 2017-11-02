@@ -97,6 +97,9 @@ client.on ('message', message => {
     message.delete().catch(O_o=>{}); 
     // And we get the bot to say the thing: 
     NOTIFY_CHANNEL.sendMessage(sayMessage);
+  } 
+  else { 
+                NOTIFY_CHANNEL.sendMessage('Only Rene can use this command, suck a cock. ', {tts: false});
   }
 });
 //spam-------------------------------------------------------------------
