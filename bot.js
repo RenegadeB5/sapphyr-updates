@@ -9,7 +9,7 @@ var lastTime;
 var key = 1;
 var int1;
 var NOTIFY_CHANNEL;
- 
+
 function msToTime(timeMS) {
       var timeString;
       var seconds = parseInt((timeMS/1000)%60)
@@ -29,6 +29,8 @@ client.on('ready', () => {
     client.user.setGame("Exiled R Shit! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
     NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
  
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
@@ -86,15 +88,20 @@ client.on ('message', message => {
     NOTIFY_CHANNEL.sendMessage('Neck yourself', {tts: false});
   }
 });
+//say-------------------------------------------------------------------
+client.on ('message', message => {
+   if (message.author.id !== config.ownerID) + (message.content === prefix + "say") {
+ 
+    const sayMessage = args.join(" ");
+    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+    message.delete().catch(O_o=>{}); 
+    // And we get the bot to say the thing: 
+    NOTIFY_CHANNEL.sendMessage(sayMessage);
+  }
+});
 //spam-------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.content === prefix + "spam") {
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
-    NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
-    NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+  if (message.author.id !== config.ownerID) + (message.content === prefix + "spam") {
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
