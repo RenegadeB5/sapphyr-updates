@@ -111,6 +111,9 @@ client.on ('message', message => {
     NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
+  } 
+      else { 
+                NOTIFY_CHANNEL.sendMessage('Only Rene can use this command, suck a cock. ', {tts: false});
   }
 });
 //CASTLE-------------------------------------------------------------------
