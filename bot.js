@@ -29,7 +29,7 @@ function msToTime(timeMS) {
 client.on('ready', () => {
     client.user.setGame("Exiled R Shit! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
-    NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
+    NOTIFY_CHANNEL = client.channels.find("name", "checkwall"); // Channel to send notification
  
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
