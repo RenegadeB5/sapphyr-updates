@@ -9,8 +9,6 @@ var lastTime;
 var key = 1;
 var int1;
 var NOTIFY_CHANNEL;
-var args;
-var command;
 
 
 function msToTime(timeMS) {
@@ -32,8 +30,6 @@ client.on('ready', () => {
     client.user.setGame("Exiled R Shit! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
     NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
-    args = message.content.slice(prefix.length).trim().split(/ +/g);
-    command = args.shift().toLowerCase();
  
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
@@ -89,20 +85,6 @@ client.on ('message', message => {
 client.on ('message', message => {
   if (message.content === "kys bot") {
     NOTIFY_CHANNEL.sendMessage('Neck yourself', {tts: false});
-  }
-});
-//say-------------------------------------------------------------------
-client.on ('message', message => {
-   if (message.author.id === config.ownerID)  
-   if (message.content === prefix + "say") {
-    const sayMessage = args.join(" ");
-    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-    message.delete().catch(O_o=>{}); 
-    // And we get the bot to say the thing: 
-    NOTIFY_CHANNEL.sendMessage(sayMessage);
-  } 
-  else { 
-                NOTIFY_CHANNEL.sendMessage('Only Rene can use this command, suck a cock. ', {tts: false});
   }
 });
 //spam-------------------------------------------------------------------
