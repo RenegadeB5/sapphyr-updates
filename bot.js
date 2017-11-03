@@ -89,8 +89,8 @@ client.on ('message', message => {
 });
 //spam-------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.author.id === config.ownerID)
-  if (message.content === prefix + "spam") {
+  if ((message.author.id === config.ownerID)  || (message.content === prefix + "spam")) {
+
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
