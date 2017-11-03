@@ -90,8 +90,8 @@ client.on ('message', message => {
 });
 //say-------------------------------------------------------------------
 client.on ('message', message => {
-   if (message.author.id === config.ownerID) + (message.content === prefix + "say") {
- 
+   if (message.author.id === config.ownerID)  
+   if (message.content === prefix + "say") {
     const sayMessage = args.join(" ");
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
     message.delete().catch(O_o=>{}); 
@@ -104,7 +104,8 @@ client.on ('message', message => {
 });
 //spam-------------------------------------------------------------------
 client.on ('message', message => {
-  if (message.author.id === config.ownerID) + (message.content === prefix + "spam") {
+  if (message.author.id === config.ownerID)
+  if (message.content === prefix + "spam") {
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
