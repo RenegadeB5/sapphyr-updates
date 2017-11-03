@@ -89,7 +89,8 @@ client.on ('message', message => {
 });
 //spam-------------------------------------------------------------------
 client.on ('message', message => {
-  if ((message.author.id === config.ownerID) || (message.content === prefix + "spam")) {
+  if (message.content === prefix + "spam") {
+        if (message.author.id === config.ownerID) {
 
     NOTIFY_CHANNEL.sendMessage('@everyone ', {tts: false});
     NOTIFY_CHANNEL.sendMessage('@here ', {tts: false});
@@ -101,7 +102,7 @@ client.on ('message', message => {
       else { 
                 NOTIFY_CHANNEL.sendMessage('Only Rene can use this command, suck a cock. ', {tts: false});
   }
-});
+  }});
 //CASTLE-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "castle") {
