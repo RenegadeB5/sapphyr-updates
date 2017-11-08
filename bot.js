@@ -9,6 +9,7 @@ var lastTime;
 var key = 1;
 var int1;
 var NOTIFY_CHANNEL;
+var NOTIFY_CHANNEL2;
 
 
 function msToTime(timeMS) {
@@ -29,20 +30,21 @@ function msToTime(timeMS) {
 client.on('ready', () => {
     client.user.setGame("Exiled R Shit! " + client.guilds.array().length + " Servers");
     console.log('successfully Logged In As Wall Check Bot!');
-    NOTIFY_CHANNEL = client.channels.find("name", "checkwall"); // Channel to send notification
- 
+    NOTIFY_CHANNEL = client.channels.find("name", "faction-chat"); // Channel to send notification
+    NOTIFY_CHANNEL2 = client.channels.find("name", "checkwall"); 
+      
 //SET INTERVAL------------------------------------------------------------------
     int1 = setInterval(function cannuner(){
     if(test == 1 && (key != 0)){
  
-        NOTIFY_CHANNEL.sendMessage('@here Oi lazy cunts, Check the walls.', {tts: false});
-        NOTIFY_CHANNEL.sendMessage('@here Oi lazy cunts, Check the walls.', {tts: false});
+        NOTIFY_CHANNEL2.sendMessage('@here Oi lazy cunts, Check the walls.', {tts: false});
+        NOTIFY_CHANNEL2.sendMessage('@here Oi lazy cunts, Check the walls.', {tts: false});
  
     }
     else{
         key = 1
         test = 1}
-    }, 692307);
+    }, 1800000);
 //1200000 = 20 mins 900000 = 15 mins  1500000 = 25 mins 1800000 = 30 mins https://www.timecalculator.net/seconds-to-milliseconds
 } //1 second = 1000 ms
 );
@@ -52,13 +54,13 @@ client.on('message', message => {
     lastSender = message.guild.lastSender = message.author
     lastTime = new Date()
  
-    NOTIFY_CHANNEL.sendMessage ('Fuck me. Someones actually checked, thank you!')
+    NOTIFY_CHANNEL2.sendMessage ('Fuck me. Someones actually checked, thank you!')
     key = 0 }
 });
 //RAID------------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === prefix + "raid") {
-    NOTIFY_CHANNEL.sendMessage('specify direction .raid north/east/south/west');
+    NOTIFY_CHANNEL2.sendMessage('specify direction .raid north/east/south/west');
   }
 });
 //RAID NORTH------------------------------------------------------------------
@@ -84,7 +86,7 @@ client.on ('message', message => {
 //kys bot-------------------------------------------------------------------
 client.on ('message', message => {
   if (message.content === "kys bot") {
-    NOTIFY_CHANNEL.sendMessage('Neck yourself', {tts: false});
+    NOTIFY_CHANNEL2.sendMessage('Neck yourself', {tts: false});
   }
 });
 //spam-------------------------------------------------------------------
@@ -152,10 +154,10 @@ client.on ('message', message => {
     .addField('Time Until Reminder', msToTime(15*60*1000 - Math.abs(new Date() - lastTime)))
     .setThumbnail("https://cdn3.iconfinder.com/data/icons/minecraft-icons/512/tnt.png")
     .setURL("https://raw.githubusercontent.com/RenegadeB5/ExiledMasterRace/master/help.md")
-      NOTIFY_CHANNEL.sendEmbed(embed)
+      NOTIFY_CHANNEL2.sendEmbed(embed)
     }
     else {
-      NOTIFY_CHANNEL.sendMessage("do .clear and then i'll tell u ;)")
+      NOTIFY_CHANNEL2.sendMessage("do .clear and then i'll tell u ;)")
     }
   }
 });
@@ -167,7 +169,7 @@ client.on ('message', message => {
     .setTitle('CLICK FOR HELP')
     .addField('help')
     .setURL("https://raw.githubusercontent.com/RenegadeB5/ExiledMasterRace/master/help.md")
-      NOTIFY_CHANNEL.sendEmbed(embed)
+      NOTIFY_CHANNEL2.sendEmbed(embed)
   }
 })
 //LOGIN TOKEN-------------------------------------------------------------------
