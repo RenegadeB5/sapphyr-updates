@@ -23,8 +23,8 @@ client.on ('message', message => {
                   message.channel.send(text);
                   number++;
               }
-         else { 
-                message.channel.send('Only Rene can use this command. ');
+           else { 
+                  message.channel.send('Only Rene can use this command. ');
   }
   }})
 });
