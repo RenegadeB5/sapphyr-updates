@@ -3,6 +3,7 @@
 const Discord = require('discord.js');
 const config = require("./config.json");
 var client = new Discord.Client();
+const prefix = "!";
 
 client.on('ready', () => {
     client.user.setGame("Exiled Hack! " + client.guilds.array().length + " Servers");
