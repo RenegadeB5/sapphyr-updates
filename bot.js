@@ -18,17 +18,13 @@ client.on ('message', message => {
           let ammount = args.slice(0).join(" ");
           
               
-                          function repeat(func, times) {
-                    func();
-                    --times && repeat(func, times);
-                }
-
-                repeat(function () { message.channel.send(text); }, 5);    
-        
-         
-                } 
-                else { 
-                       message.channel.send('Only Rene can use this command. ');
+                    var number = 1;
+              while (number <= ammount) {
+                  message.channel.send(text);
+                  number++;
+              }
+         else { 
+                message.channel.send('Only Rene can use this command. ');
   }
   }})
 });
