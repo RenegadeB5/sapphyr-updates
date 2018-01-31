@@ -18,17 +18,17 @@ client.on ('message', message => {
           let text = args.slice(1).join(" ");
           
               
-                  function repeat(func, times) {
-            func();
-            --times && repeat(func, times);
-        }
+                          function repeat(func, times) {
+                    func();
+                    --times && repeat(func, times);
+                }
 
-        repeat(function () { message.channel.send(text); }, ammount);    
+                repeat(function () { message.channel.send(text); }, ammount);    
         
          
-        } 
-        else { 
-               message.channel.send('Only Rene can use this command. ');
+                } 
+                else { 
+                       message.channel.send('Only Rene can use this command. ');
   }
   }})
 });
