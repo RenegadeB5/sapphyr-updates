@@ -16,8 +16,13 @@ client.on ('message', message => {
           let ammount = args.slice(0).join(" ");
           let text = args.slice(1).join(" ");
           
-              message.channel.send(text);
               
+                  function repeat(func, times) {
+            func();
+            --times && repeat(func, times);
+        }
+
+        repeat(function () { message.channel.send(text); }, ammount);    
         
          
         } 
