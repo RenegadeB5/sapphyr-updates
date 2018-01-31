@@ -7,15 +7,15 @@ var client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setGame("Exiled Hack! " + client.guilds.array().length + " Servers");
-    console.log('successfully Logged In As schem Bot!');
+    console.log('successfully Logged In As spam bot!');
 
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if (command === "spam") {
         if (message.author.id === config.ownerID) {
-          let ammount = args.slice(0).join(" ");
           let text = args.slice(1).join(" ");
+          let ammount = args.slice(0).join(" ");
           
               
                           function repeat(func, times) {
@@ -23,7 +23,7 @@ client.on ('message', message => {
                     --times && repeat(func, times);
                 }
 
-                repeat(function () { message.channel.send(text); }, (ammount));    
+                repeat(function () { message.channel.send(text); }, ammount);    
         
          
                 } 
