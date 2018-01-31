@@ -22,7 +22,7 @@ client.on ('message', message => {
               while (number <= ammount) {
                   message.channel.send(text);
                   number++;
-              }
+     }
       else { 
                   message.channel.send('Only Rene can use this command. ');
   }
