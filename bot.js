@@ -22,9 +22,10 @@ client.on ('message', message => {
          
         } 
         else { 
-               message.channel.send('Only Rene can use this command. ', {tts: false});
+               message.channel.send('Only Rene can use this command. ');
   }
-  }});
- 
+  }})
+});
+    
 //LOGIN TOKEN-------------------------------------------------------------------
 client.login(process.env.BOT_TOKEN);
