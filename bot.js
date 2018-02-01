@@ -17,7 +17,7 @@ client.on ('message', message => {
           let [ammount, text] = args;
            
               var number = 1;
-              while (number <= ${ammount}) {
+              while (number <= ammount) {
                   number++;
                   message.channel.send(${text});
             }     
