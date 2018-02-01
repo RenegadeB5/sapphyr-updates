@@ -16,11 +16,11 @@ client.on ('message', message => {
         if (message.author.id === config.ownerID) {
           let ammount = args.slice(0).join(" ");
           let text = args.slice(1).join(" ");
-            
+          let hehe = 5
+           
               var number = 1;
               while (number <= ammount) {
                   number++;
-                  let hehe = 5
                   message.channel.send(hehe);
             }     
      } 
