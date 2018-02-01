@@ -21,7 +21,7 @@ client.on ('message', message => {
                     var number = 1;
               while (number <= ammount) {
                   message.channel.send(text);
-                  number++;
+                  number + 1;
 
             }
      } 
