@@ -19,7 +19,7 @@ client.on ('message', message => {
               var number = 1;
               while (number <= ammount) {
                   number++;
-                  message.channel.send(${text});
+                  message.channel.send('${text}');
             }     
      } 
        else { 
