@@ -20,7 +20,8 @@ client.on ('message', message => {
               var number = 1;
               while (number <= ammount) {
                   number++;
-                  message.channel.send('text');
+                  let hehe = 5
+                  message.channel.send(hehe);
             }     
      } 
        else { 
