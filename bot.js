@@ -19,6 +19,7 @@ client.on ('message', message => {
             
               var number = 1;
               while (number <= ammount) {
+                  let text = args.slice(1).join(" ");
                   number++;
                   message.channel.send(text);
             }     
