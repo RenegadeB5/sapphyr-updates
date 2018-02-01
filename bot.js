@@ -14,14 +14,13 @@ client.on ('message', message => {
   const command = args.shift().toLowerCase();
   if (command === "spam") {
         if (message.author.id === config.ownerID) {
-          let ammount = args.slice(0).join(" ");
+          let ammount = args.slice(0)
           let text = args.slice(1).join(" ");
-          let hehe = 5
            
               var number = 1;
               while (number <= ammount) {
                   number++;
-                  message.channel.send(hehe);
+                  message.channel.send(text);
             }     
      } 
        else { 
