@@ -20,10 +20,9 @@ client.on ('message', message => {
               
                     var number = 1;
               while (number <= ammount) {
+                  number++;
                   message.channel.send(text);
-                   let number = number + 1
-
-            }
+            }     
      } 
        else { 
                 message.channel.send('Only Rene can use this command. ');
