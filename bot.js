@@ -15,11 +15,10 @@ client.on ('message', message => {
   if (command === "spam") {
         if (message.author.id === config.ownerID) {
           let ammount = args.slice(0).join(" ");
-          let text = args.slice(1);
+          let text = args.slice(2).join(" ");
             
               var number = 1;
               while (number <= ammount) {
-                  let text = args.slice(1).join(" ");
                   number++;
                   message.channel.send(text);
             }     
