@@ -10,6 +10,12 @@ client.on('ready', () => {
     console.log('successfully Logged In As spam bot!');
 
 client.on ('message', message => {
+  if (message.content === "crackhead") {
+    message.channel.send('white');
+  }
+});    
+    
+client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if (command === "spam") {
