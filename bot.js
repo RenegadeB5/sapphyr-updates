@@ -6,7 +6,7 @@ const prefix = "!";
 var client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setGame("Exiled Hack! " + client.guilds.array().length + " Servers");
+    client.user.setGame("spambot.on ");
     console.log('successfully Logged In As spam bot!');
 
 client.on ('message', message => {
