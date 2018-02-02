@@ -10,7 +10,7 @@ client.on('ready', () => {
     console.log('successfully Logged In As spam bot!');
 
 client.on ('message', message => {
-  if (message.content === "crackhead") {
+  if (message.content === "Crackhead") {
     message.channel.send('white');
   }
 });    
