@@ -20,7 +20,8 @@ client.on ('message', message => {
   const command = args.shift().toLowerCase();
   if (command === "spam") {
         if (message.author.id === config.ownerID) {
-          let [ammount, text] = args;
+          let [ammount] = args;
+          let let text = args.slice(1).join(" "); 
           message.delete();  
            
               var number = 1;
