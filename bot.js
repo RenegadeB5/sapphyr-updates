@@ -21,7 +21,7 @@ client.on ('message', message => {
   if (command === "spam") {
         if (message.author.id === config.ownerID) {
           let [ammount] = args;
-          let let text = args.slice(1).join(" "); 
+          let text = args.slice(1).join(" "); 
           message.delete();  
            
               var number = 1;
