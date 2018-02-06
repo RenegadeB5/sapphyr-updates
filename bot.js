@@ -31,7 +31,7 @@ client.on ('message', message => {
           
         repeat(function () { message.channel.send(text); }, ammount);
             }     
-     } 
+      
        else { 
                 message.channel.send('Only Rene can use this command. ');
   }
