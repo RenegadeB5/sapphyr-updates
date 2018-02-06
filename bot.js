@@ -24,10 +24,12 @@ client.on ('message', message => {
           let text = args.slice(1).join(" "); 
           message.delete();  
            
-              var number = 1;
-              while (number <= ammount) {
-                  number++;
-                  message.channel.send(text);
+                     function repeat(func, times) {
+                    func();
+                    --times && repeat(func, times);
+                }
+
+        repeat(function () { message.channel.send(text); }, ammount);
             }     
      } 
        else { 
