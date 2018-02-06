@@ -28,7 +28,7 @@ client.on ('message', message => {
                     func();
                     --times && repeat(func, times);
                 }
-
+          }
         repeat(function () { message.channel.send(text); }, ammount);
             }     
      } 
