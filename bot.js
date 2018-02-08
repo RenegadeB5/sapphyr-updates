@@ -6,7 +6,7 @@ const prefix = "!";
 var client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setGame(process.env.PLAYING);
+    client.user.setPresence({ game: { name: process.env.IM_PLAYING, type: 0 } });
     console.log('successfully Logged In As spam bot!');
 
 client.on ('message', message => {
