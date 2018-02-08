@@ -8,7 +8,7 @@ var client = new Discord.Client();
 client.on('ready', () => {
     client.user.setPresence({ game: { name: process.env.IM_PLAYING, type: 0 } });
     console.log('successfully Logged In As spam bot!');
-
+});
 client.on ('message', message => {
   if (message.content === "Crackhead") {
     message.channel.send('white');
@@ -35,8 +35,6 @@ client.on ('message', message => {
        else { 
                 message.channel.send('Only Rene can use this command. ');
   }
-  }})
-});
-    
+  }});   
 //LOGIN TOKEN-------------------------------------------------------------------
 client.login(process.env.BOT_TOKEN);
