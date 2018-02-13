@@ -15,6 +15,7 @@ client.on ('message', message => {
       if (message.author.id === process.env.ownerID) {
          let [task,member] = args; 
          let role = args.slice(2).join(" ");  
+         member.(task)Role(role).catch(console.error); 
       } 
       else {
          message.channel.send('Only Rene can use this command. ');
