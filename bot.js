@@ -1,12 +1,11 @@
 //bot.js
 //anything with "//" infront of it is treated as a comment, it doesn't affect the code of the bot
 const Discord = require('discord.js');
-const config = require("./config.json");
 const prefix = "!";
 var client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: process.env.IM_PLAYING, type: 0 } });
+    client.user.setPresence({ game: { name: process.env.playing, type: 0 } });
     console.log('successfully Logged In As spam bot!');
 });
 client.on ('message', message => {
