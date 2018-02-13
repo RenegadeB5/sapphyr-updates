@@ -15,7 +15,7 @@ client.on ('message', message => {
       if (message.author.id === process.env.ownerID) {
          let [task] = args; 
          let member = message.mentions.members.first();
-         let role = args.slice(2).join(" ");  
+         let role = args.slice(2);  
            if (task === "add") {
                member.addRole(role).catch(console.error);
            } 
