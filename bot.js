@@ -16,7 +16,7 @@ client.on ('message', message => {
          let [task,member] = args; 
          let role = args.slice(2).join(" ");  
          
-     else {
+      else {
          message.channel.send('Only Rene can use this command. ');
        }
      }
