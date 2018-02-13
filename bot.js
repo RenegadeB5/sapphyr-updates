@@ -13,7 +13,8 @@ client.on ('message', message => {
   const command = args.shift().toLowerCase();  
   if (command === "role") {
       if (message.author.id === process.env.ownerID) {
-         let [task,member] = args; 
+         let [task] = args; 
+         let member = message.mentions.members.first();
          let role = args.slice(2).join(" ");  
            if (task === "add") {
                member.addRole(role).catch(console.error);
