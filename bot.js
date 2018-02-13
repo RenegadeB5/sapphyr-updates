@@ -15,12 +15,13 @@ client.on ('message', message => {
       if (message.author.id === process.env.ownerID) {
          let [task] = args; 
          let member = message.mentions.members.first();
-         let role = args.slice(2);  
+         let role = args.slice(2).join(" ");  
            if (task === "add") {
+               console.log(role);
                member.addRole(role).catch(console.error);
            } 
           else {
-              member.removeRole(role).catch(console.error);
+               member.removeRole(role).catch(console.error);
           }
       } 
       else {
