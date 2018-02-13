@@ -9,11 +9,25 @@ client.on('ready', () => {
     console.log('successfully Logged In As spam bot!');
 });
 client.on ('message', message => {
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();  
+  if (command === "role") {
+      if (message.author.id === process.env.ownerID) {
+         let [task,member] = args; 
+         let role = args.slice(2).join(" ");  
+         
+     else {
+         message.channel.send('Only Rene can use this command. ');
+       }
+     }
+  }});    
+
+client.on ('message', message => {
   if (message.content === "Crackhead") {
     message.channel.send('white');
   }
 });    
-    
+
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
