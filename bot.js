@@ -38,10 +38,11 @@ client.on ('message', message => {
 
 client.on ('message', message => {
   if (message.content === "!list roles") {
-    var roles = msg.channel.server.roles.map(role=>role.name);
-	roles = roles.join(", ").replace(/@/g, '@\u200b');
-    console.log(":black_small_square: **Roles:** `" + roles + "`");
-  }
+    process: function(bot, msg, suffix) {  
+      var roles = msg.channel.server.roles.map(role=>role.name);
+      roles = roles.join(", ").replace(/@/g, '@\u200b');
+      console.log(":black_small_square: **Roles:** `" + roles + "`");
+  }}
 });
 
 client.on ('message', message => {
