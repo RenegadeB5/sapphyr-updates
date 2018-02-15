@@ -38,7 +38,7 @@ client.on ('message', message => {
 
 client.on ('message', message => {
   if (message.content === "!list roles") {
-           var role = message.server.roles
+           var role = message.server.roles.get('name', 'all')
            console.log(role);
   }
 });
