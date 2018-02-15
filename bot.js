@@ -39,7 +39,7 @@ client.on ('message', message => {
 client.on ('message', message => {
   if (message.content === "!list roles") {
            console.log(message.server.roles.map);
-  }}
+  }
 });
 
 client.on ('message', message => {
