@@ -38,9 +38,9 @@ client.on ('message', message => {
 
 client.on ('message', message => {
   if (message.content === "!list roles") {
-    var roles = message.channel.server.roles.map(role=>role.name);
+    var roles = msg.channel.server.roles.map(role=>role.name);
 	roles = roles.join(", ").replace(/@/g, '@\u200b');
-    console.log(message.channel.server.roles.map(role=>role.name));
+    console.log(msg.channel.server.roles.map(role=>role.name));
   }
 });
 
