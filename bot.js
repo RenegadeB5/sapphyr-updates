@@ -38,7 +38,7 @@ client.on ('message', message => {
 
 client.on ('message', message => {
   if (message.content === "!list roles") {
-    console.log(roles.find(role));
+    console.log(msg.channel.server.roles.map(role=>role.name););
   }
 });
 
