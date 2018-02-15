@@ -38,7 +38,7 @@ client.on ('message', message => {
 
 client.on ('message', message => {
   if (message.content === "!list roles") {
-    console.log(client.roles);
+    console.log(member.roles);
   }
 });
 
