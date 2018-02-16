@@ -8,7 +8,7 @@ client.on('ready', () => {
     const guildNames = client.guilds.map(g => g.name).join("\n")
     client.user.setPresence({ game: { name: process.env.playing, type: 0 } });
     console.log('successfully Logged In As spam bot!');
-    client.log(guildNames);
+    console.log(guildNames);
 });
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
