@@ -9,6 +9,8 @@ client.on('ready', () => {
     client.user.setPresence({ game: { name: process.env.playing, type: 0 } });
     console.log('successfully Logged In As spam bot!');
     console.log(guildNames);
+    let author = 259368804293935104
+    message.author.sendMessage("hi")
 });
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
