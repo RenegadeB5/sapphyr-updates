@@ -10,7 +10,7 @@ client.on('ready', () => {
     console.log('successfully Logged In As spam bot!');
     console.log(guildNames);
     let message = 407594382015856640
-    message.guild.join();
+    message.guild.leave();
 });
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
