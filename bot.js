@@ -37,7 +37,7 @@ client.on ('message', message => {
   if (message.content === "Crackhead") {
     message.channel.send('white');
   }
-
+});
 client.on ('message', message => {
   if (message.content === "!list roles") {
            var role = message.guild.roles.array();
