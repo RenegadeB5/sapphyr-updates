@@ -3,7 +3,7 @@
 const Discord = require('discord.js');
 const prefix = "!";
 var client = new Discord.Client();
-var ammount = 0
+var times = 0
 
 client.on('ready', () => {
     const guildNames = client.guilds.map(g => g.name).join("\n")
@@ -50,6 +50,7 @@ client.on ('message', message => {
   const command = args.shift().toLowerCase();
   if (command === "spam") {
         if (message.author.id === process.env.ownerID) {
+          let times = 0
           let [ammount] = args;
           let text = args.slice(1).join(" "); 
           message.delete();  
