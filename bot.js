@@ -59,8 +59,12 @@ client.on ('message', message => {
               times += 1
           } 
           while (ammount > times) {
-              spam();
+              setinterval(spam, 100);
           }
+            else {
+                stopinterval(spam);
+            }
+         
              }     
       
        else { 
