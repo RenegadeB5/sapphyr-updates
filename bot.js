@@ -55,16 +55,15 @@ client.on ('message', message => {
           let text = args.slice(1).join(" "); 
           message.delete();  
           function spam() {
+              if (times >= ammount) {
+                  clearInterval(spam);
+              }
               message.channel.send(text);
-              times += 1
-          } 
-          while (ammount > times) {
-              setinterval(spam, 100);
+              times += 1              
+          }           
+          setInterval(spam, 100);
           }
-            else {
-                stopinterval(spam);
-            }
-         
+            
              }     
       
        else { 
