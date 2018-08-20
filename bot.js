@@ -3,6 +3,7 @@
 const Discord = require('discord.js');
 const prefix = "!";
 var client = new Discord.Client();
+var ammount = 0
 
 client.on('ready', () => {
     const guildNames = client.guilds.map(g => g.name).join("\n")
@@ -36,7 +37,6 @@ client.on ('message', message => {
   if (message.content === "Crackhead") {
     message.channel.send('white');
   }
-});    
 
 client.on ('message', message => {
   if (message.content === "!list roles") {
@@ -53,14 +53,14 @@ client.on ('message', message => {
           let [ammount] = args;
           let text = args.slice(1).join(" "); 
           message.delete();  
-           
-                     function repeat(func, times) {
-                    func();
-                    --times && repeat(func, times);
-                }
-          
-        repeat(function () { message.channel.send(text); }, ammount);
-            }     
+          function spam() {
+              message.channel.send(text);
+              times += 1
+          } 
+          while (ammount > times) {
+              spam();
+          }
+             }     
       
        else { 
                 message.channel.send('Only Rene can use this command. ');
