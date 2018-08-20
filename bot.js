@@ -54,7 +54,7 @@ client.on ('message', message => {
           let [ammount] = args;
           let text = args.slice(1).join(" "); 
           message.delete(); 
-          setInterval(spam, 100);
+          setInterval(spam, 30);
           function spam() {
               if (times >= ammount) {
                   clearInterval(spam);
