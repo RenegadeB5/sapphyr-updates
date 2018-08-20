@@ -58,6 +58,7 @@ client.on ('message', message => {
           function spam() {
               if (times >= ammount) {
                   clearInterval(spam);
+                  return;
               }
               message.channel.send(text);
               times += 1              
