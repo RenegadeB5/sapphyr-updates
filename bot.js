@@ -53,7 +53,8 @@ client.on ('message', message => {
           let times = 0
           let [ammount] = args;
           let text = args.slice(1).join(" "); 
-          message.delete();  
+          message.delete(); 
+          setInterval(spam, 100);
           function spam() {
               if (times >= ammount) {
                   clearInterval(spam);
@@ -61,7 +62,7 @@ client.on ('message', message => {
               message.channel.send(text);
               times += 1              
           }           
-          setInterval(spam, 100);
+          
         }                                        
        else { 
                 message.channel.send('Only Rene can use this command. ');
