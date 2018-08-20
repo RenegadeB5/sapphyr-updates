@@ -62,10 +62,7 @@ client.on ('message', message => {
               times += 1              
           }           
           setInterval(spam, 100);
-          }
-            
-             }     
-      
+        }                                        
        else { 
                 message.channel.send('Only Rene can use this command. ');
   }
