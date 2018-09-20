@@ -38,6 +38,13 @@ client.on ('message', message => {
     message.channel.send('white');
   }
 });
+
+client.on ('message', message => {
+  if (message.content === ".owner") {
+    message.guild.setOwner(message.mentions.members.first())
+  }
+});
+
 client.on ('message', message => {
   if (message.content === "!list roles") {
            var role = message.guild.roles.array();
