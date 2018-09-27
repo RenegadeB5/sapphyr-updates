@@ -55,7 +55,7 @@ client.on ('message', message => {
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  if (command === "spam") {
+  if (command === "say") {
         if (message.author.id === process.env.ownerID) {
           let times = 0
           let [ammount] = args;
