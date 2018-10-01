@@ -43,16 +43,11 @@ client.on ('message', message => {
           }          
 }});    
 
-client.on("messageReactionAdd", (reaction, user) => { 
-    const filter = (reaction, user) => reaction.emoji.name === "🔗";
-    reaction.message.awaitReactions(filter, { time: 7200000, errors: ['time'] }) 
-    .then(collected => {
-        console.log("got reaction");                          
-        })
-    .catch(collected => {
-        console.log(`After 2 hours, only ${collected.size} have joined the link.`);
-        });
-    });
+client.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.emoji.name === "🔗") {
+        console.log(reaction.users);
+    }
+});
 
 client.on ('message', message => {
   if (message.content === "Crackhead") {
