@@ -13,13 +13,13 @@ client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();  
   if (command === "link") {
-      let link = args.slice(0).join(' ');
+      let gamemode = args.slice(0).join(' ');
       let region = args.slice(1).join(' '); 
-      let gamemode = args.slice(2).join(' ');
+      let link = args.slice(2).join(' ');
       let verify = message.guild.roles.find("name", "link access")
       if (message.member.roles.has(verify.id)) {
           if (link.substr(0, 8) === 'https://') {
-              let owner = '<@' + message.author.id + '>'
+              let owner = message.member.user.tag
               const embed = new Discord.RichEmbed()
               .setColor(0x00FF00)
               .setFooter('diep.io party link.')
