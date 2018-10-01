@@ -45,8 +45,8 @@ client.on ('message', message => {
 
 client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "🔗") {
-        let dm = reaction.users['id'];
-        console.log(dm);
+        let dm = reaction.users;
+        console.log(dm[3]);
     }
 });
 
