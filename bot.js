@@ -33,7 +33,7 @@ client.on ('message', message => {
               message.react('🔗')
           }
           else {
-              message.channel.send('Please include \"https://\" in your link.);
+              message.channel.send('Please include \"https://\" in your link.');
           }
       }
       else {
