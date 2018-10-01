@@ -22,12 +22,12 @@ client.on ('message', message => {
               let owner = '<@' + message.author.id + '>'
               const embed = new Discord.RichEmbed()
               .setColor(0x00FF00)
-              .setFooter('Link created by' + ' ' + owner)
+              .setFooter('diep.io party link.')
               .setTitle('Party Link')
+              .setAuthor(owner)
               .addField("Region", region, true)
               .addField("Gamemode", gamemode, true)
               .addField("Link", link, true)
-              .setURL('\"' + link + '\"')
               .setTimestamp()
               NOTIFY_CHANNEL.send({embed});
               message.react('🔗')
