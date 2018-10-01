@@ -47,7 +47,7 @@ client.on("messageReactionAdd", (reaction, user) => {
     const filter = (reaction, user) => { 
         return ['🔗'].includes(reaction.emoji.name) && user.id === '407593823921766410';
         };
-    message.awaitReactions(filter, { time: 7200000, errors: ['time'] }) 
+    reaction.message.awaitReactions(filter, { time: 7200000, errors: ['time'] }) 
     .then(collected => {
         const reaction = collected.first();
                            
