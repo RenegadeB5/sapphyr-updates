@@ -32,7 +32,21 @@ client.on ('message', message => {
               NOTIFY_CHANNEL.send({embed})
               .then(function (message) {
                   message.react('🔗')
-              });
+                  const filter = (reaction, user) => {                                           
+                      return ['🔗'].includes(reaction.emoji.name) && user.id === message.author.id;
+                      };
+                  message.awaitReactions(filter, { time: 7200000, errors: ['time'] })             
+                  .then(collected => {
+                      const reaction = collected.first();
+                      
+                      if (reaction.emoji.name === '🔗') {
+                          console.log(reaction.users.first());
+                      }
+                      })
+                  .catch(collected => {
+                      console.log(`After 2 hours, only ${collected.size} have joined the link.`);
+                      });
+                  });
           }
           else {
               message.channel.send('Please include \"https://\" in your link.');
