@@ -27,7 +27,7 @@ client.on ('message', message => {
               .addField("Region", region, true)
               .addField("Gamemode", gamemode, true)
               .addField("Link", link, true)
-              .setURL(link)
+              .setURL('\"' + link + '\"')
               .setTimestamp()
               NOTIFY_CHANNEL.send({embed});
               message.react('🔗')
