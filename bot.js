@@ -32,7 +32,19 @@ client.on ('message', message => {
               NOTIFY_CHANNEL.send({embed})
               .then(function (message) {
                   message.react('🔗')
-                  const filter = (reaction, user) => {                                           
+                  });
+          }
+          else {
+              message.channel.send('Please include \"https://\" in your link.');
+          }
+      }
+      else {
+              message.author.send('You are not authorized to recieve links.');
+          }          
+}});    
+
+client.on("messageReactionAdd", (reaction, user) => {
+    const filter = (reaction, user) => {                                           
                       return ['🔗'].includes(reaction.emoji.name) && user.id === message.author.id;
                       };
                   message.awaitReactions(filter, { time: 7200000, errors: ['time'] })             
@@ -46,17 +58,7 @@ client.on ('message', message => {
                   .catch(collected => {
                       console.log(`After 2 hours, only ${collected.size} have joined the link.`);
                       });
-                  });
-          }
-          else {
-              message.channel.send('Please include \"https://\" in your link.');
-          }
-      }
-      else {
-              message.author.send('You are not authorized to recieve links.');
-          }
-          
-}});    
+});
 
 client.on ('message', message => {
   if (message.content === "Crackhead") {
