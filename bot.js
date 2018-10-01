@@ -1,47 +1,48 @@
-//bot.js
-//anything with "//" infront of it is treated as a comment, it doesn't affect the code of the bot
-const Discord = require('discord.js');
-const prefix = "!";
+const prefix = ".";
 var client = new Discord.Client();
-var times = 0
+var NOTIFY_CHANNEL;
 
 client.on('ready', () => {
     const guildNames = client.guilds.map(g => g.name).join("\n")
     client.user.setPresence({ game: { name: process.env.playing, type: 0 } });
-    console.log('successfully Logged In As spam bot!');
-    console.log(guildNames);
+    console.log('successfully Logged In As Link Bot!');
+    NOTIFY_CHANNEL = client.channels.find("name", "member-links");
 });
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();  
-  if (command === "role") {
-      if (message.author.id === process.env.ownerID) {
-         let [task] = args; 
-         let member = message.mentions.members.first();
-         let m = args.slice(2).join(" ");  
-         let role = message.guild.roles.find("name", m); 
-           if (task === "add") {
-               console.log(role);
-               member.addRole(role).catch(console.error);
-           } 
-          else {
-               member.removeRole(role).catch(console.error);
+  if (command === "link") {
+      let link = args.slice(0).join(' ');
+      let region = args.slice(1).join(' '); 
+      let gamemode = args.slice(2).join(' ');
+      let verify = message.guild.roles.find("name", "link access")
+      if (message.member.roles.has(verify.id)) {
+          if (link.substr(0, 8) === 'https://') {
+              let owner = '<@' + message.author.id + '>'
+              const embed = new Discord.RichEmbed()
+              .setColor(0x00FF00)
+              .setFooter('Link created by' + ' ' + owner)
+              .setTitle('Party Link')
+              .addField("Region", region, true)
+              .addField("Gamemode", gamemode, true)
+              .addField("Link", link, true)
+              .setURL(link)
+              .setTimestamp()
+              NOTIFY_CHANNEL.sendEmbed(embed);
           }
-      } 
+          else {
+              message.channel.send('Please include \"https://\" in your link.);
+          }
+      }
       else {
-         message.channel.send('Only Rene can use this command. ');
-        }
-  }});    
+              message.author.send('You are not authorized to recieve links.');
+          }
+          
+}});    
 
 client.on ('message', message => {
   if (message.content === "Crackhead") {
     message.channel.send('white');
-  }
-});
-
-client.on ('message', message => {
-  if (message.content === ".owner") {
-    message.guild.setOwner(message.mentions.members.first())
   }
 });
 
@@ -51,30 +52,4 @@ client.on ('message', message => {
            console.log(role);
   }
 });
-
-client.on ('message', message => {
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  if (command === "say") {
-        if (message.author.id === process.env.ownerID) {
-          let times = 0
-          let [ammount] = args;
-          let text = args.slice(1).join(" "); 
-          message.delete(); 
-          setInterval(spam, 30);
-          function spam() {
-              if (times >= ammount) {
-                  clearInterval(spam);
-                  return;
-              }
-              message.channel.send(text);
-              times += 1              
-          }           
-          
-        }                                        
-       else { 
-                message.channel.send('Only Rene can use this command. ');
-  }
-  }});   
-//LOGIN TOKEN-------------------------------------------------------------------
 client.login(process.env.BOT_TOKEN);
