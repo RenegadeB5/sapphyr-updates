@@ -47,11 +47,7 @@ client.on("messageReactionAdd", (reaction, user) => {
     const filter = (reaction, user) => reaction.emoji.name === "🔗";
     reaction.message.awaitReactions(filter, { time: 7200000, errors: ['time'] }) 
     .then(collected => {
-        const reaction = collected.first();
-                           
-        if (reaction.emoji.name === '🔗') {
-            console.log('someone reacted');
-            }
+        console.log("got reaction");                          
         })
     .catch(collected => {
         console.log(`After 2 hours, only ${collected.size} have joined the link.`);
