@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const prefix = ".";
 var client = new Discord.Client();
 var NOTIFY_CHANNEL;
@@ -29,6 +30,7 @@ client.on ('message', message => {
               .setURL(link)
               .setTimestamp()
               NOTIFY_CHANNEL.sendEmbed(embed);
+              message.react('🔗')
           }
           else {
               message.channel.send('Please include \"https://\" in your link.);
