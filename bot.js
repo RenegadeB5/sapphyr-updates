@@ -41,7 +41,7 @@ client.on ('message', message => {
                           const reaction = collected.first();
                       
                           if (reaction.emoji.name === '🔗') {
-                              console.log(reaction.users.first());
+                              console.log('someone reacted');
                               }
                           })
                       .catch(collected => {
