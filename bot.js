@@ -13,9 +13,9 @@ client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();  
   if (command === "link") {
-      let gamemode = args.slice(0).join(' ');
-      let region = args.slice(1).join(' '); 
-      let link = args.slice(2).join(' ');
+      let gamemode = args[0];
+      let region = args[1];
+      let link = args[2];
       let verify = message.guild.roles.find("name", "link access")
       if (message.member.roles.has(verify.id)) {
           if (link.substr(0, 8) === 'https://') {
