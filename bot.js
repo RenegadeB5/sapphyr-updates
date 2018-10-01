@@ -29,8 +29,10 @@ client.on ('message', message => {
               .addField("Gamemode", gamemode, true)
               .addField("Link", link, true)
               .setTimestamp()
-              NOTIFY_CHANNEL.send({embed});
-              message.react('🔗')
+              NOTIFY_CHANNEL.send({embed})
+              .then(function (message) {
+                  message.react('🔗')
+              });
           }
           else {
               message.channel.send('Please include \"https://\" in your link.');
