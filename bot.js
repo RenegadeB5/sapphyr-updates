@@ -32,22 +32,6 @@ client.on ('message', message => {
               NOTIFY_CHANNEL.send({embed})
               .then(function (message) {
                   message.react('🔗')
-                  client.on("messageReactionAdd", (reaction, user) => {                     
-                      const filter = (reaction, user) => { 
-                          return ['🔗'].includes(reaction.emoji.name) && user.id === '407593823921766410';
-                          };
-                      message.awaitReactions(filter, { time: 7200000, errors: ['time'] }) 
-                      .then(collected => {
-                          const reaction = collected.first();
-                      
-                          if (reaction.emoji.name === '🔗') {
-                              console.log('someone reacted');
-                              }
-                          })
-                      .catch(collected => {
-                          console.log(`After 2 hours, only ${collected.size} have joined the link.`);
-                          });
-                      });
                   });
           }
           else {
@@ -58,6 +42,23 @@ client.on ('message', message => {
               message.author.send('You are not authorized to recieve links.');
           }          
 }});    
+
+client.on("messageReactionAdd", (reaction, user) => { 
+    const filter = (reaction, user) => { 
+        return ['🔗'].includes(reaction.emoji.name) && user.id === '407593823921766410';
+        };
+    message.awaitReactions(filter, { time: 7200000, errors: ['time'] }) 
+    .then(collected => {
+        const reaction = collected.first();
+                           
+        if (reaction.emoji.name === '🔗') {
+            console.log('someone reacted');
+            }
+        })
+    .catch(collected => {
+        console.log(`After 2 hours, only ${collected.size} have joined the link.`);
+        });
+    });
 
 client.on ('message', message => {
   if (message.content === "Crackhead") {
