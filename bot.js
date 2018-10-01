@@ -29,7 +29,7 @@ client.on ('message', message => {
               .addField("Link", link, true)
               .setURL(link)
               .setTimestamp()
-              NOTIFY_CHANNEL.sendEmbed(embed);
+              NOTIFY_CHANNEL.send({embed});
               message.react('🔗')
           }
           else {
