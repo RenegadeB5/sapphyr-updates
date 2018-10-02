@@ -53,8 +53,13 @@ client.on('messageReactionAdd', (reaction, user) => {
         console.log('----------------------------------------------------');
         console.log(dmsend);
         client.users.get(dmsend).send("someMessage");
-        reaction.channel.fetchMessage(partysend)        
-          .then(message => console.log(message.content))
+        if (dmsend === '407593823921766410') {
+            return;
+        }
+        else {
+            reaction.channel.fetchMessage(partysend)          
+               .then(message => console.log(message.content))
+        }
     }
 });
 
