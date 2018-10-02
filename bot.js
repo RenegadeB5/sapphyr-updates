@@ -45,6 +45,7 @@ client.on ('message', message => {
 }});    
 
 client.on('messageReactionAdd', (reaction, user) => {
+    const filter = (reaction, user) => reaction.emoji.name === "🔗";
     let collector = reaction.message.createReactionCollector(filter, { time: 5000 });    
     collector.on('collect', (reaction, collector) => {
         if(reaction.emoji.name === "🔗") {
