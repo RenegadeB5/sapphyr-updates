@@ -46,14 +46,14 @@ client.on ('message', message => {
 client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "🔗") {
         let dm = reaction.users.map(r => r.id);
-        let dm = dm[dm.length-1];
+        let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageId);
-        let party = party[0];
-        channel.fetchMessage(party)
+        let partysend = party[0];
+        channel.fetchMessage(partysend)
           .then(message => console.log(message.content))
-        console.log(dm[0]);
+        console.log(dmsend[0]);
         console.log('----------------------------------------------------');
-        client.users.get(dm[0]).send("someMessage");
+        client.users.get(dmsend[0]).send("someMessage");
     }
 });
 
