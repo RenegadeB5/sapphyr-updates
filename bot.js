@@ -51,7 +51,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
         let checkrole = reaction.message.guild.roles.find("name", "link access");
-        if (dmsend.user.roles.has(checkrole.id) {
+        if (dmsend.user.roles.has(checkrole.id)) {
             return;
         }
         else {
