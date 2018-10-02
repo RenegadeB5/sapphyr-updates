@@ -49,15 +49,16 @@ client.on('messageReactionAdd', (reaction, user) => {
         let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[0];
-        console.log(partysend);
-        console.log('----------------------------------------------------');
-        console.log(dmsend);
         if (dmsend === '407593823921766410') {
             return;
         }
         else {
             reaction.message.channel.fetchMessage(partysend)          
                .then(fetchedMessage => console.log(fetchedMessage.embeds))
+            let linksend = reaction.message.channel.fetchMessage(partysend)
+            let linksent = linksend.embeds
+            console.log('----------------------------------------------');
+            console.log(linksent);
             client.users.get(dmsend).send("someMessage");
         }
     }
