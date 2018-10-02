@@ -53,7 +53,8 @@ client.on('messageReactionAdd', (reaction, user) => {
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
         client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
-        console.log(reaction.users);
+        let loguser = ((reaction.users.map(r => r.username))[0]) + '#' + ((reaction.users.map(r => r.discriminator))[0])
+        console.log(loguser);
     }
 });     
 
