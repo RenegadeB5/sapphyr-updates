@@ -1,13 +1,15 @@
 const Discord = require('discord.js');
 const prefix = ".";
 var client = new Discord.Client();
-var NOTIFY_CHANNEL;
+var link_channel;
+var log_channel;
 
 client.on('ready', () => {
     const guildNames = client.guilds.map(g => g.name).join("\n")
     client.user.setPresence({ game: { name: process.env.playing, type: 0 } });
     console.log('successfully Logged In As Link Bot!');
-    NOTIFY_CHANNEL = client.channels.find("name", "member-links");
+    link_channel = client.channels.find("name", "member-links");
+    log_channel = client.channels.find("name", "link-logs");
 });
 client.on ('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -30,7 +32,7 @@ client.on ('message', message => {
               .addField("Region", region, true)
               .addField("Link", link, true)
               .setTimestamp()
-              NOTIFY_CHANNEL.send({embed})
+              link_channel.send({embed})
               .then(function (message) {
                   message.react('🔗')
                   });
@@ -51,7 +53,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
         client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
-        console.log(((reaction.message.embeds).map(r => r.url))[0]);
+        console.log(reaction.users);
     }
 });     
 
