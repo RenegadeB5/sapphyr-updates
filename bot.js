@@ -53,7 +53,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         console.log(dmsend[0]);
         console.log('----------------------------------------------------');
         console.log(dmsend[0]);
-        client.users.get(dmsend[0]).send("someMessage");
+        
     }
 });
 
