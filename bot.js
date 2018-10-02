@@ -57,7 +57,7 @@ client.on('messageReactionAdd', (reaction, user) => {
             return;
         }
         else {
-            reaction.channel.fetchMessage(partysend)          
+            reaction.message.channel.fetchMessage(partysend)          
                .then(message => console.log(message.content))
         }
     }
