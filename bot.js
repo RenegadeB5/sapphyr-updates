@@ -22,6 +22,7 @@ client.on ('message', message => {
               let owner = message.member.user.tag
               const embed = new Discord.RichEmbed()
               .setColor(0x00FF00)
+              .setURL(link)
               .setFooter('diep.io party link.')
               .setTitle('Party Link')
               .setAuthor(owner)
@@ -56,6 +57,7 @@ client.on('messageReactionAdd', (reaction, user) => {
             reaction.message.channel.fetchMessage(partysend)          
                .then(fetchedMessage => console.log(fetchedMessage.embeds))
             let linksend = reaction.message.channel.fetchMessage(partysend).embeds
+            let linksent = linksend
             console.log('----------------------------------------------');
             console.log(linksend);
             client.users.get(dmsend).send("someMessage");
