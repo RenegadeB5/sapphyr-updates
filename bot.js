@@ -49,7 +49,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let dm = reaction.users.map(r => r.id);
         let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageID);
-        let partysend = party[0];
+        let partysend = party[party.length-1];
         if (dmsend === '407593823921766410') {
             return;
         }
