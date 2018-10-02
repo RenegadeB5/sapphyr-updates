@@ -31,6 +31,7 @@ client.on ('message', message => {
               .addField("Gamemode", gamemode, true)
               .addField("Region", region, true)
               .addField("Link", link, true)
+              .addField("Current Members", ' ', true)
               .setTimestamp()
               link_channel.send({embed})
               .then(function (message) {
@@ -58,7 +59,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let loguser = log1[log1.length-1] + '#' + log2[log2.length-1]
         console.log(loguser);
         console.log('-----------------------');
-        console.log(reaction.message.embeds);
+        console.log(((reaction.message.embeds).map(r => r.title))[0]);
         console.log('--------------------');
     }
 });     
