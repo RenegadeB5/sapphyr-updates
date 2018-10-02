@@ -40,7 +40,7 @@ client.on ('message', message => {
           }
       }
       else {
-              message.author.send('You are not authorized to recieve links.');
+              message.author.send('You are not authorized to post links.');
           }          
 }});    
 
@@ -50,14 +50,8 @@ client.on('messageReactionAdd', (reaction, user) => {
         let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
-        let checkrole = reaction.message.guild.roles.find("name", "link access");
-        if (dmsend.user.roles.has(checkrole.id)) {
-            return;
-        }
-        else {
-            reaction.message.channel.fetchMessage(partysend)
-               .then(fetchedMessage => client.users.get(dmsend).send(((fetchedMessage.embeds).map(r => r.url))[0]))
-        }
+        reaction.message.channel.fetchMessage(partysend)
+           .then(fetchedMessage => client.users.get(dmsend).send(((fetchedMessage.embeds).map(r => r.url))[0]))
     }
 });
 
@@ -70,8 +64,8 @@ client.on ('message', message => {
       .setFooter('diep.io party link bot.')
       .setTitle('Party Link Bot Commands')
       .setAuthor('ReneageBB')
-      .addField('!link', 'Usage: !link <gamemode> <region> <link> (Link must include \'https://\')', true)
-      .addField('Recieving links', 'React to the link you would like to join and you will be messaged with the link. \n You must have the \'link access\' role to post and recieve links.', true)
+      .addField('!link', 'Usage: !link <gamemode> <region> <link> \n(Link must include \"https://\")', true)
+      .addField('Recieving links', 'React to the link you would like to join and you will be messaged with the link. \nYou must have the \"link access\" role to post and recieve links.', true)
       .setTimestamp()
       message.channel.send({embed})
   }
