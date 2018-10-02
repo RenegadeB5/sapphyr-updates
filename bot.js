@@ -53,8 +53,8 @@ client.on('messageReactionAdd', (reaction, user) => {
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
         client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
-        let log1 = reaction.users.map(r => r.username)[0]
-        let log2 = reaction.users.map(r => r.discriminator)[0]
+        let log1 = reaction.users.map(r => r.username)
+        let log2 = reaction.users.map(r => r.discriminator)
         let loguser = log1[log1.length-1] + '#' + log2[log2.length-1]
         console.log(loguser);
         console.log('-----------------------');
