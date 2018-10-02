@@ -57,9 +57,9 @@ client.on('messageReactionAdd', (reaction, user) => {
             reaction.message.channel.fetchMessage(partysend)          
                .then(fetchedMessage => console.log(fetchedMessage.embeds))
             let linksend = reaction.message.channel.fetchMessage(partysend).embeds
-            let linksent = linksend
+            let linksent = linksend.map(r => r.url);
             console.log('----------------------------------------------');
-            console.log(linksend);
+            console.log(linksent);
             client.users.get(dmsend).send("someMessage");
         }
     }
