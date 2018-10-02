@@ -52,7 +52,9 @@ client.on('messageReactionAdd', (reaction, user) => {
         console.log(partysend);
         console.log('----------------------------------------------------');
         console.log(dmsend);
-        client.users.get(dmsend).send("someMessage");        
+        client.users.get(dmsend).send("someMessage");
+        reaction.channel.fetchMessage(partysend)        
+          .then(message => console.log(message.content))
     }
 });
 
