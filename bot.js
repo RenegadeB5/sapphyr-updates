@@ -50,6 +50,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
+        console.log(reaction.message.channel.fetchMessage(partysend))
         reaction.message.channel.fetchMessage(partysend)
            .then(fetchedMessage => client.users.get(dmsend).send(((fetchedMessage.embeds).map(r => r.url))[0]))
     }
