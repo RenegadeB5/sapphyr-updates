@@ -54,6 +54,7 @@ client.on('messageReactionAdd', (reaction, user) => {
             return;
         }
         else {
+            console.log(partysend);
             let linksend = reaction.message.channel.fetchMessage(partysend).embeds
             console.log(linksend);
             console.log('----------------------------------------------');
