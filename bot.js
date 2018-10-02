@@ -50,7 +50,8 @@ client.on('messageReactionAdd', (reaction, user) => {
         let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
-        if (dmsend === '407593823921766410') {
+        let checkrole = reaction.message.guild.roles.find("name", "link access");
+        if (dmsend.user.roles.has(checkrole.id) {
             return;
         }
         else {
@@ -61,15 +62,19 @@ client.on('messageReactionAdd', (reaction, user) => {
 });
 
 client.on ('message', message => {
-  if (message.content === "Crackhead") {
-    message.channel.send('white');
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();  
+  if (command === "help") {
+    const embed = new Discord.RichEmbed()
+      .setColor(0x00FF00)
+      .setFooter('diep.io party link bot.')
+      .setTitle('Party Link Bot Commands')
+      .setAuthor('ReneageBB')
+      .addField('!link', 'Usage: !link <gamemode> <region> <link> (Link must include \'https://\')', true)
+      .addField('Recieving links', 'React to the link you would like to join and you will be messaged with the link. \n You must have the \'link access\' role to post and recieve links.', true)
+      .setTimestamp()
+      message.channel.send({embed})
   }
 });
 
-client.on ('message', message => {
-  if (message.content === "!list roles") {
-           var role = message.guild.roles.array();
-           console.log(role);
-  }
-});
 client.login(process.env.BOT_TOKEN);
