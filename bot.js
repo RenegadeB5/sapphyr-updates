@@ -58,7 +58,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let loguser = log1[log1.length-1] + '#' + log2[log2.length-1]
         console.log(loguser);
         console.log('-----------------------');
-        console.log(reaction.message);
+        console.log(reaction.message.embeds);
         console.log('--------------------');
     }
 });     
