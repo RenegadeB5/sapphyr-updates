@@ -55,6 +55,9 @@ client.on('messageReactionAdd', (reaction, user) => {
         client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
         let loguser = ((reaction.users.map(r => r.username))[0]) + '#' + ((reaction.users.map(r => r.discriminator))[0])
         console.log(loguser);
+        console.log('-----------------------');
+        console.log(reaction.users);
+        console.log('--------------------');
     }
 });     
 
