@@ -47,9 +47,8 @@ client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "🔗") {
         let dm = reaction.users.map(r => r.id);
         let dmsend = dm[dm.length-1];
-        let party = reaction.users.map(r => r.lastMessageId);
+        let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[0];
-        console.log(reaction.users);
         console.log(party);
         console.log('----------------------------------------------------');
         console.log(dmsend);
