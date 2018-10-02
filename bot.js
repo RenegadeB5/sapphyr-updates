@@ -45,12 +45,14 @@ client.on ('message', message => {
 }});    
 
 client.on('messageReactionAdd', (reaction, user) => {
-    let dm = reaction.users.map(r => r.id);
-    let dmsend = dm[dm.length-1];
-    let party = reaction.users.map(r => r.lastMessageID);
-    let partysend = party[party.length-1];
-    client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
-    console.log(((reaction.message.embeds).map(r => r.url))[0]);
+    if(reaction.emoji.name === '🔗') {
+        let dm = reaction.users.map(r => r.id);
+        let dmsend = dm[dm.length-1];
+        let party = reaction.users.map(r => r.lastMessageID);
+        let partysend = party[party.length-1];
+        client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
+        console.log(((reaction.message.embeds).map(r => r.url))[0]);
+    }
 });     
 
 client.on ('message', message => {
