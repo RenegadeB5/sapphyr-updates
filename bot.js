@@ -49,7 +49,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let dmsend = dm[dm.length-1];
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[0];
-        console.log(party);
+        console.log(partysend);
         console.log('----------------------------------------------------');
         console.log(dmsend);
         
