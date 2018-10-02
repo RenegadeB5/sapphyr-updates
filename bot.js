@@ -53,8 +53,9 @@ client.on('messageReactionAdd', (reaction, user) => {
         let party = reaction.users.map(r => r.lastMessageID);
         let partysend = party[party.length-1];
         client.users.get(dmsend).send(((reaction.message.embeds).map(r => r.url))[0])
-	    console.log(dm);
+        console.log(((reaction.message.embeds).map(r => r.url))[0]);
         });
+    console.log('-------------------------');
     console.log(collectlink);   
 }); 
 
