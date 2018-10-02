@@ -55,8 +55,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         }
         else {
             reaction.message.channel.fetchMessage(partysend)
-               .then(fetchedMessage => console.log(fetchedMessage.embeds))
-            client.users.get(dmsend).send("someMessage");
+               .then(fetchedMessage => console.log(typeof fetchedMessage.embeds))
         }
     }
 });
