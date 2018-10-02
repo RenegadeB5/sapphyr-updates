@@ -50,7 +50,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         let party = reaction.users.map(r => r.lastMessageId);
         let partysend = party[0];
         
-        console.log(partysend);
+        console.log(party);
         console.log('----------------------------------------------------');
         console.log(dmsend);
         
