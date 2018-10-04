@@ -16,12 +16,12 @@ module.exports = class PartyCommand extends Command {
                     key: 'gamemode',
                     prompt: 'The gamemode of the game.',
                     type: 'string'
-                }
+                },
                 {
                     key: 'region',
                     prompt: 'The region of the party invite.',
                     type: 'string'
-                }
+                },
                 {
                     key: 'link',
                     prompt: 'The party invite link.(must include \"https://\")',
