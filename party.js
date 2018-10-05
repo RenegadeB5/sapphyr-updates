@@ -32,12 +32,12 @@ module.exports = class PartyCommand extends Command {
     }
 
     async run(msg, { game, gamemode, region, link }) {
-        let linkchannel = msg.guild.channels.find("name", "member-links")
+        let linkchannel = this.msg.guild.channels.find("name", "member-links")
         let embed = new Discord.RichEmbed()
         .setColor(0x00FF00)
         .setFooter('React with \"🔗\" to get the link.')
         .setTitle('${game} party invite')
-        .setAuthor(msg.member.user.tag)
+        .setAuthor(this.msg.member.user.tag)
         .addField("Gamemode", gamemode, true)
         .addField("Region", region, true)
         .setTimestamp()
